@@ -24,4 +24,9 @@ public class OrderServiceImpl implements OrderService{
 
         return new Order(memberId,itemName, itemPrice, discountPrice);
     }
+
+    //싱글톤 테스트 용도 코드로 굳이 인터페이스에는 만들지 않음
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 }
